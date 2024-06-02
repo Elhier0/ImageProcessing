@@ -1,9 +1,6 @@
 from PIL import Image
 import matplotlib.pyplot as plt
 
-#FURKAN ÖZKAYA 200316060
-
-
 image = Image.open("C:/Users/furkan\Desktop\paris.png")
 
 gray_image = image.convert("L")
@@ -13,8 +10,8 @@ rotated_image = image.rotate(60)
 histogram = image.histogram()
 
 plt.bar(range(256), histogram[:256], color='blue', alpha=0.7)
-plt.xlabel('Pixel Değeri')
-plt.ylabel('Pixel Sayısı')
+plt.xlabel('Pixel Value')
+plt.ylabel('Pixel Count')
 plt.title('Histogram')
 plt.savefig('histogram.png')
 plt.close()
